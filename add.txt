@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnAddNewrow").click(function () {
+                var name = $("#txtuserName").val();
+                var password = $("#txtuserpassword").val();
+                $("#tblhm").append("<tr><td>" + name + "</td><td>"+password+ "</td></tr>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <table width="100%" border="1"  cellpadding="5">
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" id="txtuserName" />
+            </td>
+            <td>User Password</td>
+            <td>
+                <input type="password" id="txtuserpassword" />
+            </td>
+            <td>
+                <input type="button" id="btnAddNewrow" value="Add New Row" />
+            </td>
+        </tr>
+
+    </table>
+    <hr />
+    <table id="tblhm" width="100%" border="1">
+        <tr>
+            <th>User Name</th>
+            <th>password</th>
+        </tr>
+    </table>
+</body>
+</html>

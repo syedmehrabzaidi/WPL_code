@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnshow").click(function () {
+                $("#dvfirst").show("slow",function () {
+                    $("#dvsecond").show("slow",function () {
+                        $("#dvthird").show("slow");
+                    });
+            });
+            });
+            $("#sat").click(function () {
+                $("div").hide("slow")
+                    .show("slow")
+                    .toggle("slow")
+                    .fadeIn("slow")
+                    .fadeOut("slow")
+                    .fadeToggle("slow");
+            });
+            $("#btnhide").click(function () {
+                $("#dvfirst").hide("slow", function () {
+                    $("#dvsecond").hide("slow", function () {
+                        $("#dvthird").hide("slow");
+                    });
+                });
+            });
+            $("#btntoggle").click(function () {
+                $("#dvfirst").toggle("slow");
+            });
+            $("#btnfadeIn").click(function () {
+                $("#dvfirst").fadeIn("slow");
+            });
+            $("#btnfadeOut").click(function () {
+                $("#dvfirst").fadeOut("slow");
+            });
+            $("#btnfadeToggle").click(function () {
+                $("#dvfirst").fadeToggle("slow");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <input type="button" id="btnshow" value="show" />
+    <input type="button" id="btnhide" value="hide" />
+    <input type="button" id="btntoggle" value="toggle" />
+    <input type="button" id="btnfadeIn" value="fadeIn" />
+    <input type="button" id="btnfadeOut" value="fadeOut" />
+    <input type="button" id="btnfadeToggle" value="fadeToggle" />
+    <input type="button" id="sat" value="wpl" />
+    <div id="dvfirst" style=" background-color:red; width:100%; height:400px" ;>
+    </div>
+    <div id="dvsecond" style=" background-color:green; width:100%; height:400px" ;>
+    </div>
+    <div id="dvthird" style=" background-color:blue; width:100%; height:400px" ;>
+    </div>
+</body>
+</html>
